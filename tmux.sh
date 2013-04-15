@@ -36,7 +36,7 @@ base_session_is_free()
 
 create_base_session()
 {
-    tmux new-session -s  "$TMUX_SESSION_NAME"
+    tmux -2 new-session -s  "$TMUX_SESSION_NAME"
 }
 
 tmux_session_has_clients_attached()
@@ -74,7 +74,7 @@ get_slave_session_name()
 tmux_attach_to_session()
 {
     session_name="$1"
-    tmux attach-session -t "$session_name"
+    tmux -2 attach-session -t "$session_name"
 }
 
 list_slave_sessions()
